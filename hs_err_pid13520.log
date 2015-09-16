@@ -1,0 +1,145 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 8192 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=13520, tid=120
+#
+# JRE version:  (7.0_79-b15) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.79-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000000218f000):  JavaThread "main" [_thread_in_vm, id=120, stack(0x0000000002510000,0x0000000002610000)]
+
+Stack: [0x0000000002510000,0x0000000002610000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+
+[error occurred during error reporting (printing native stack), id 0xc0000005]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.lang.ClassLoader.<clinit>()V+10
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;)Ljava/lang/Object;+0
+j  java.lang.reflect.AccessibleObject.<clinit>()V+19
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x000000000218f000 JavaThread "main" [_thread_in_vm, id=120, stack(0x0000000002510000,0x0000000002610000)]
+
+Other Threads:
+  0x000000000aa4e000 VMThread [stack: 0x000000000b900000,0x000000000ba00000] [id=12772]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000000000218c070] SymbolTable_lock - owner thread: 0x000000000218f000
+
+Heap
+ PSYoungGen      total 37888K, used 655K [0x00000007d6080000, 0x00000007d8a80000, 0x0000000800000000)
+  eden space 32768K, 2% used [0x00000007d6080000,0x00000007d6123dc8,0x00000007d8080000)
+  from space 5120K, 0% used [0x00000007d8580000,0x00000007d8580000,0x00000007d8a80000)
+  to   space 5120K, 0% used [0x00000007d8080000,0x00000007d8080000,0x00000007d8580000)
+ ParOldGen       total 85504K, used 0K [0x0000000782200000, 0x0000000787580000, 0x00000007d6080000)
+  object space 85504K, 0% used [0x0000000782200000,0x0000000782200000,0x0000000787580000)
+ PSPermGen       total 21504K, used 759K [0x000000077d000000, 0x000000077e500000, 0x0000000782200000)
+  object space 21504K, 3% used [0x000000077d000000,0x000000077d0bde78,0x000000077e500000)
+
+Card table byte_map: [0x0000000005610000,0x0000000005a30000] byte_map_base: 0x0000000001a28000
+
+Polling page: 0x0000000000440000
+
+Code Cache  [0x0000000002610000, 0x0000000002880000, 0x0000000005610000)
+ total_blobs=61 nmethods=0 adapters=38 free_code_cache=48825Kb largest_free_block=49997184
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.032 loading class 0x0000000002216d70 done
+Event: 0.032 loading class 0x0000000002222ca0
+Event: 0.032 loading class 0x0000000002222ca0 done
+Event: 0.032 loading class 0x0000000002217300
+Event: 0.032 loading class 0x00000000022341e0
+Event: 0.032 loading class 0x00000000022341e0 done
+Event: 0.033 loading class 0x0000000002217300 done
+Event: 0.033 loading class 0x000000000221a9f0
+Event: 0.033 loading class 0x000000000221a9f0 done
+Event: 0.033 loading class 0x000000000220df20
+
+
+Dynamic libraries:
+0x000000013fc80000 - 0x000000013fcb3000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\java.exe
+0x00000000770d0000 - 0x0000000077279000 	C:\Windows\SYSTEM32\ntdll.dll
+0x0000000076fb0000 - 0x00000000770cf000 	C:\Windows\system32\kernel32.dll
+0x000007fefd1d0000 - 0x000007fefd23b000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefd820000 - 0x000007fefd8fb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefd900000 - 0x000007fefd99f000 	C:\Windows\system32\msvcrt.dll
+0x000007feff2d0000 - 0x000007feff2ef000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefd6f0000 - 0x000007fefd81d000 	C:\Windows\system32\RPCRT4.dll
+0x0000000076eb0000 - 0x0000000076faa000 	C:\Windows\system32\USER32.dll
+0x000007feff100000 - 0x000007feff167000 	C:\Windows\system32\GDI32.dll
+0x000007feff070000 - 0x000007feff07e000 	C:\Windows\system32\LPK.dll
+0x000007fefd9a0000 - 0x000007fefda69000 	C:\Windows\system32\USP10.dll
+0x000007fefba60000 - 0x000007fefbc54000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefd5d0000 - 0x000007fefd641000 	C:\Windows\system32\SHLWAPI.dll
+0x000007feff2a0000 - 0x000007feff2ce000 	C:\Windows\system32\IMM32.DLL
+0x000007fefde00000 - 0x000007fefdf09000 	C:\Windows\system32\MSCTF.dll
+0x0000000059370000 - 0x0000000059442000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\msvcr100.dll
+0x000000006e410000 - 0x000000006ebe5000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\server\jvm.dll
+0x000007fefb1f0000 - 0x000007fefb1f9000 	C:\Windows\system32\WSOCK32.dll
+0x000007feff390000 - 0x000007feff3dd000 	C:\Windows\system32\WS2_32.dll
+0x000007fefeda0000 - 0x000007fefeda8000 	C:\Windows\system32\NSI.dll
+0x000007fefae90000 - 0x000007fefaecb000 	C:\Windows\system32\WINMM.dll
+0x00000000772a0000 - 0x00000000772a7000 	C:\Windows\system32\PSAPI.DLL
+0x000000005f500000 - 0x000000005f50f000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\verify.dll
+0x000000005f4d0000 - 0x000000005f4f8000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\java.dll
+0x000000005f370000 - 0x000000005f385000 	C:\Program Files\Java\jdk1.7.0_79\jre\bin\zip.dll
+
+VM Arguments:
+java_command: <unknown>
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 37 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, aes, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 8248616k(1585284k free), swap 8758772k(5112k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.79-b02) for windows-amd64 JRE (1.7.0_79-b15), built on Apr 10 2015 12:36:16 by "java_re" with unknown MS VC++:1600
+
+time: Wed Aug 19 13:24:20 2015
+elapsed time: 0 seconds
+

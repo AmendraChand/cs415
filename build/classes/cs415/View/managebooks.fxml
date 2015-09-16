@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cs415.Controller.ManagebooksController">
+    <stylesheets>
+        <URL value="@managebooks.css" />
+    </stylesheets>
+   <children>
+      <TabPane layoutX="7.0" prefHeight="307.0" prefWidth="487.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add ">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane dividerPositions="0.26004228329809725" layoutX="7.0" layoutY="7.0" prefHeight="266.0" prefWidth="475.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox layoutX="4.0" layoutY="7.0" prefHeight="258.0" prefWidth="118.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="118.0" text="Title:" />
+                                          <Label prefHeight="24.0" prefWidth="118.0" text="Author:" />
+                                          <Label prefHeight="25.0" prefWidth="118.0" text="Publisher:" />
+                                          <Label prefHeight="25.0" prefWidth="127.0" text="Catalog number:" />
+                                          <Label prefHeight="25.0" prefWidth="118.0" text="ISBN:" />
+                                          <Label prefHeight="25.0" prefWidth="118.0" text="Edition" />
+                                          <Label prefHeight="25.0" prefWidth="118.0" text="Pub year:" />
+                                          <Label prefHeight="26.0" prefWidth="118.0" text="Status:" />
+                                          <Label prefHeight="25.0" prefWidth="118.0" text="Date In:" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <VBox layoutX="-6.0" layoutY="7.0" prefHeight="225.0" prefWidth="195.0">
+                                       <children>
+                                          <TextField prefHeight="20.0" prefWidth="325.0" />
+                                          <TextField />
+                                          <TextField />
+                                          <TextField />
+                                          <TextField />
+                                          <TextField />
+                                          <TextField />
+                                          <TextField />
+                                          <TextField />
+                                       </children>
+                                    </VBox>
+                                    <Button layoutX="288.0" layoutY="238.0" mnemonicParsing="false" text="Add" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Remove">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+           <Tab text="Search">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <SplitPane layoutX="6.0" layoutY="6.0" prefHeight="271.0" prefWidth="487.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                 <children>
+                                    <TextField layoutX="14.0" layoutY="28.0" prefHeight="25.0" prefWidth="296.0" />
+                                    <Button layoutX="370.0" layoutY="28.0" mnemonicParsing="false" text="Search" />
+                                    <ListView layoutX="14.0" layoutY="61.0" prefHeight="200.0" prefWidth="450.0" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
